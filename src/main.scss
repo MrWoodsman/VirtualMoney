@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import '@/variables';
+
+:root {
+	line-height: 1.25;
+	// font-weight: 400;
+
+	// color-scheme: light dark;
+	// color: rgba(255, 255, 255, 0.87);
+	// background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	// Kolory tekstów
+	&.white {
+		color: $white;
+	}
+	&.black {
+		color: $black;
+	}
+	&.acentColor {
+		color: $acentColor;
+	}
+	// Text align
+	&.center {
+		text-align: center;
+	}
+	&.right {
+		text-align: right;
+	}
+
+	// BOLD
+	&.w1 {
+		font-weight: 100;
+	}
+	&.w2 {
+		font-weight: 200;
+	}
+	&.w3 {
+		font-weight: 300;
+	}
+	&.w4 {
+		font-weight: 400;
+	}
+	&.w5 {
+		font-weight: 500;
+	}
+	&.w6 {
+		font-weight: 600;
+	}
+	&.w7 {
+		font-weight: 700;
+	}
+	&.w8 {
+		font-weight: 800;
+	}
+	&.w9 {
+		font-weight: 900;
+	}
+}
+
+// Wielkosci tekstów
+// $deafaultFontSize: 16px;
+p {
+	font-size: 1rem;
+	&.big {
+		font-size: 1.5rem;
+	}
+	&.small {
+		font-size: 0.5rem;
+	}
+}
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.75rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+h4 {
+	font-size: 1.25rem;
+}
+h5 {
+	font-size: 1rem;
+}
+h6 {
+	font-size: 0.75rem;
+}
+
+// TEXT WRAP
+.text_wrap {
+	display: flex;
+	flex-direction: column;
+	&.center {
+		align-items: center;
+	}
+	&.end {
+		align-items: end;
+	}
+}

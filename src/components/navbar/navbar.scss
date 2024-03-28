@@ -1,0 +1,17 @@
+@import '@/variables';
+
+.navbar_default {
+	background: $acentColor;
+
+	display: grid;
+	justify-items: center;
+
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+	& .content {
+		padding: 0.5rem 1rem;
+
+		width: 100%;
+		max-width: $maxW;
+	}
+}

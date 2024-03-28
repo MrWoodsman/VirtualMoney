@@ -1,0 +1,63 @@
+@import '@/variables';
+
+.info_section {
+	width: 100%;
+
+	display: grid;
+	justify-items: center;
+
+	padding: 4rem 0;
+	& .content {
+		padding: 0 1rem;
+
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+
+		height: 100%;
+		width: 100%;
+
+		max-width: $maxW;
+		& .info_wrap {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 2rem;
+			row-gap: 4rem;
+		}
+	}
+
+	.info_box {
+		&.reverse {
+			flex-direction: row-reverse;
+		}
+
+		width: 100%;
+
+		max-width: 800px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		flex-wrap: wrap;
+
+		gap: 2rem;
+		& .left {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			max-width: 600px;
+			flex: 1 1 300px;
+		}
+		// & .right {
+		// }
+
+		// ELEMENTY
+		& .image_box {
+			width: 250px;
+			height: 250px;
+			background: lightgray;
+		}
+	}
+}

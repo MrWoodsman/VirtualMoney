@@ -1,0 +1,63 @@
+@import '@/variables';
+
+.hero {
+	background-image: url('@/assets/images/hero_back.jpg');
+	background-size: cover;
+
+	width: 100%;
+	min-height: 600px;
+	height: 750px;
+
+	display: grid;
+	justify-items: center;
+
+	position: relative;
+
+	.hero_wave {
+		position: absolute;
+		bottom: 0;
+		max-height: 100px;
+		width: 100%;
+	}
+
+	& .content {
+		padding: 0 16px;
+
+		height: 100%;
+		width: 100%;
+
+		max-width: $maxW;
+
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		align-items: center;
+		justify-content: center;
+
+		h1 {
+			font-size: 3.25rem;
+			font-weight: 700;
+		}
+		p {
+			font-size: 1.25rem;
+			font-weight: 300;
+		}
+
+		button {
+			padding: 0.5rem 1.5rem;
+			border-radius: 4rem;
+
+			color: white;
+			font-size: 1rem;
+			font-weight: 500;
+
+			background: rgba(#47b258, 0.25);
+			backdrop-filter: blur(4px);
+
+			border: none;
+
+			cursor: pointer;
+		}
+	}
+}
