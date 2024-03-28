@@ -1,7 +1,7 @@
 @import '@/variables';
 
 .hero {
-	background-image: url('@/assets/images/hero_back.jpg');
+	background-image: url('@/assets/images/hero_back.webp');
 	background-size: cover;
 
 	width: 100%;
@@ -15,7 +15,7 @@
 
 	.hero_wave {
 		position: absolute;
-		bottom: 0;
+		bottom: -1px;
 		max-height: 100px;
 		width: 100%;
 	}

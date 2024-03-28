@@ -13,13 +13,13 @@ export function Footer() {
 					&#169; {new Date().getFullYear()} VirtualCash Inc. Wszystkie prawa
 					zastrzeżone
 				</p>
-				<a
+				<p
 					style={{ userSelect: 'none', cursor: 'pointer' }}
 					onClick={scrollToTop}
 					className="white center"
 				>
 					Powrót na górę
-				</a>
+				</p>
 			</div>
 		</footer>
 	);
