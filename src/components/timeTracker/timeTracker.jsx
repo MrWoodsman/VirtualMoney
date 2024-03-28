@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import './timeTracker.scss';
 
+import { eventDate } from '@/config';
+
 export function TimeTracker() {
-	const startDate = new Date(2024, 3, 14, 12, 0, 0);
+	const startDate = eventDate;
 
 	const [days, setDays] = useState(0);
 	const [hours, setHours] = useState(0);
