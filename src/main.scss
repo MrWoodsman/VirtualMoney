@@ -77,6 +77,14 @@ a {
 	&.w9 {
 		font-weight: 900;
 	}
+	// ITALIC
+	&.italic {
+		font-style: italic;
+	}
+	// UPERCASE
+	&.upercase {
+		text-transform: uppercase;
+	}
 }
 
 // Wielkosci tekstów
