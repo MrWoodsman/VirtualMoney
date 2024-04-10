@@ -3,6 +3,8 @@ import './timeTracker.scss';
 
 import { eventDate } from '@/config';
 
+import { motion } from "framer-motion"
+
 export function TimeTracker() {
 	const startDate = eventDate;
 
@@ -44,15 +46,30 @@ export function TimeTracker() {
 				<div className="clock_wrap">
 					<div className="time_box">
 						<h2>{String(days).padStart(2, '0')}</h2>
-						<p className="w9 acentColor">dni</p>
+						<motion.p
+							initial={{ y: 10, opacity: 0 }}
+							whileInView={{ y: 0, opacity: 1 }}
+							viewport={{ once: false }}
+							transition={{ duration: .25, delay: .2 }}
+							className="w9 acentColor">dni</motion.p>
 					</div>
 					<div className="time_box">
 						<h2>{String(hours).padStart(2, '0')}</h2>
-						<p className="w9 acentColor">godzin</p>
+						<motion.p
+							initial={{ y: 10, opacity: 0 }}
+							whileInView={{ y: 0, opacity: 1 }}
+							viewport={{ once: false }}
+							transition={{ duration: .25, delay: .4 }}
+							className="w9 acentColor">godzin</motion.p>
 					</div>
 					<div className="time_box">
 						<h2>{String(minutes).padStart(2, '0')}</h2>
-						<p className="w9 acentColor">minut</p>
+						<motion.p
+							initial={{ y: 10, opacity: 0 }}
+							whileInView={{ y: 0, opacity: 1 }}
+							viewport={{ once: false }}
+							transition={{ duration: .25, delay: .6 }}
+							className="w9 acentColor">minut</motion.p>
 					</div>
 				</div>
 			</div>

@@ -1,14 +1,24 @@
 import './hero.scss';
 
+import { motion } from "framer-motion"
+
 export function Hero() {
 	return (
 		<section className="hero">
 			<div className="content">
-				<div className="text_wrap center">
+				<motion.div
+					initial={{ opacity: 0, y: 100 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: .75 }}
+					className="text_wrap center">
 					<h1 className="white center">Wirtualny Portfel</h1>
 					<p className="white center">Dla twoich fizycznych pieniędzy</p>
-				</div>
-				<button>Jak to działa?</button>
+				</motion.div>
+				<motion.button
+					initial={{ opacity: 0, y: 100 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: .75 }}
+				>Jak to działa?</motion.button>
 			</div>
 
 			<svg

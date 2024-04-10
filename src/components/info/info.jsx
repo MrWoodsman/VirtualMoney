@@ -1,16 +1,23 @@
 import './info.scss';
 
+import { motion } from "framer-motion"
+
 export function Info() {
 	return (
 		<section className="info_section">
 			<div className="content">
-				<div className="text_wrap center">
+				<motion.div
+					initial={{ scaleY: 0, opacity: 0 }}
+					whileInView={{ scaleY: 1, opacity: 1 }}
+					viewport={{ once: true }}
+					transition={{ duration: .25 }}
+					className="text_wrap center">
 					<h1 className="acentColor center">Nasz Świat Finansów</h1>
 					<p className="black center">
 						Odkryj, kontroluj, i osiągaj lepsze wyniki w swoich finansach dzięki
 						naszej aplikacji.
 					</p>
-				</div>
+				</motion.div>
 				<div className="info_wrap">
 					<InfoBox
 						title={'Wygodne zarządzanie budżetem'}
@@ -38,8 +45,18 @@ export function Info() {
 }
 
 function InfoBox({ reverse, title, text }) {
+	const animationDirection = reverse ? "-100%" : "100%"
 	return (
-		<div className={reverse ? 'info_box reverse' : 'info_box'}>
+		<motion.div
+			initial={{
+				opacity: 0, x: animationDirection
+			}}
+			whileInView={{
+				opacity: 1, x: 0
+			}}
+			viewport={{ once: false }}
+			transition={{ duration: 1, delay: .1 }}
+			className={reverse ? 'info_box reverse' : 'info_box'} >
 			<div className="left">
 				<h3 className="acentColor">{title}</h3>
 				<p>{text}</p>
@@ -47,6 +64,6 @@ function InfoBox({ reverse, title, text }) {
 			<div className="right">
 				<div className="image_box"></div>
 			</div>
-		</div>
+		</motion.div >
 	);
 }
